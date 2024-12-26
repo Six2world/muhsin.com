@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <label for="city"> choose a city
+ <select name="city" id="city">
+  <option value="none"></option>
+<option value="nigeria">nigeria</option>
+<option value="ghana">ghana</option>
+<option value="togo">togo</option>
+</select>
+ </label>
+
+<p>you selected <span id="demo"></span></p>
+
+<textarea name="" id="area" cols="30" rows="10"></textarea>
+<p id="den">the value is <span id="dens"></span></p>
+
+
+
+<textarea name="" id="text" cols="30" rows="0">type your message here</textarea>
+ <p>muhsin width <span id="width"></span></p>
+ <p>muhsin is rich <span id="rich"></span></p>
+ <p>muhsin is tall <span id="tall"></span></p>
+ <p>muhsin is young <span id="young"></span></p>
+ <p id="demo"></p>
+
+ <p id="maths"></p>
+
+ <p id="will">sum will be printed here</p>
+ <button onclick="add(6,4)">add</button>
+
+
+ <p id="kilo"></p>
+
+<p id="object"></p>
+
+ <script >
+  const test = 8
+let x = 4;
+const y = 3;
+x+=y;
+document.write(x);
+  const banana = {
+    color : "yellow",
+    size: "long",
+    quantity : 3,
+    isSweet : true,
+  };
+
+  document.getElementById("object").innerHTML = "banana <br/>" + 
+  "color:" + banana.color + "<br/>" +
+  "size:" + banana.size + "<br/>" +
+  "quantity:" + banana.quantity + "<br/>"
+  "does it taste sweet:" + banana.isSweet; 
+  
+  function tomiles (kilometer) {
+const miless  = kilometer + 0.5356;
+return kilometer + "kilometer/s" + "equals" + miless;
+  }
+
+ //alert(tomiles(6));
+
+ document.getElementById("kilo").innerHTML = tomiles(10);
+
+function add(num1, num2) {
+const be = num1 + num2 ;
+document.getElementById("will").innerHTML = be;
+}
+  numbers(5,5)
+  function numbers(num1,num2) {
+  const sum = num1 + num2;
+  document.getElementById("maths").innerHTML =sum;
+  }
+  function write(str) {
+    document.getElementById("demo").innerHTML = str;
+  }
+  write("hello world")
+  muhsin.addEventListener("resize", function(){
+    document.getElementById("width").innerHTML = window.innerWidth;
+    document.getElementById("rich").innerHTML = window.innerHeight;
+  });
+
+    const text = document.getElementById("text");
+    text.addEventListener("focus", function(){
+      text.style.background = "yellow";
+     
+
+
+      text.addEventListener("blur", function() {
+        text.style.background = "white"
+      });
+    });
+
+   
+
+const area = document.getElementById("area");
+
+area.addEventListener("mouseover", function() {
+  document.getElementById("dens").innerHTML = area.value;
+});
+
+ </script>
+</body>
+</html>
